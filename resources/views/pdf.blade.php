@@ -27,7 +27,9 @@
             padding-left: 10px;
         }
 
-       
+        /* table.blueTable tr:nth-child(even) {
+            background: #D0E4F5;
+        } */
 
         table.blueTable thead {
             background: #1C6EA4;
