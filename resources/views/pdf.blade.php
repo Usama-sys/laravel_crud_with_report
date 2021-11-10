@@ -43,7 +43,7 @@
             font-size: 15px;
             font-weight: bold;
             color: #070707;
-            border-left: 2px solid #D0E4F5;
+            
         }
 
         table.blueTable thead th:first-child {
