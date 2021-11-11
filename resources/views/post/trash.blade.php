@@ -8,18 +8,18 @@
                 <div class="col-md-12 ">
                     <div class="card">
                         <div class="card-header">
-                            All Post
-                            <a href="/add_post"><button class="btn btn-primary mx-3">Add Post</button></a>
-                            <a href="/pdf"><button class="btn btn-secondary mx-3">Report</button></a>
-                            <a href="/trash"><button class="btn btn-outline-secondary mx-3">Trashed</button></a>
+                            Trashed
+                            <a href="/"><button class="btn btn-primary mx-3">Back</button></a>
+                            
                         </div>
                         <div class="card-body">
-                            @if (Session::has('post_deleted'))
-                                <div class="alert alert-danger" role="alert">
-                                    {{Session::get('post_deleted') }}
-                                </div>
-                                
-                            @endif
+                            @if (Session::has('post_restore'))
+                            <div class="alert alert-info" role="alert">
+                                {{Session::get('post_restore') }}
+                            </div>
+                            
+                        @endif  
+                    
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -40,9 +40,9 @@
                                             <td>{{ $post->title }}</td>
                                             <td>{{ $post->body }}</td>
                                             <td>
-                                                <a href="/edit/{{ $post->id }}" class="btn btn-outline-success btn-sm">Update</a>
-                                                <a href="/delete/{{ $post->id }}" class="btn btn-outline-danger btn-sm">
-                                                     Delete</a>
+                                                
+                                                <a href="restore/{{ $post->id }}" class="btn btn-outline-warning btn-sm">
+                                                     Restore</a>
                                                 
                                             </td>
                                         </tr>

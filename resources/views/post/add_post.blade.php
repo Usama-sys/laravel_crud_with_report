@@ -21,12 +21,22 @@
                                 @csrf
                                 <div>
                                     <label for="title">Post title</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Enter Title" required>
+                                    <input type="text" class="form-control" name="title" placeholder="Enter Title" value="{{ old('title') }}">
+                                    <span style="color:red">
+                                    @error('title')
+                                        {{ $message }}
+                                    @enderror
+                                    </span>
                                 </div>
                                 <div>
                                     <label for="title">Post Discription</label>
                                     <textarea rows="3" class="form-control" name="body"
-                                        placeholder="Enter Discription " required></textarea>
+                                        placeholder="Enter Discription " value="{{ old('body') }}"></textarea>
+                                        <span style="color:red">
+                                            @error('body')
+                                                {{ $message }}
+                                            @enderror
+                                            </span>
                                 </div>
                                 <button type="submit" class="btn btn-success mt-2">Add Post</button>
                                 <a href="/" class="btn btn-primary mt-2">Back</a>

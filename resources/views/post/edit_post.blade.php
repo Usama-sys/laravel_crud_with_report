@@ -17,7 +17,8 @@
                                 </div>
 
                             @endif
-                            <form action="{{ url('edit', [$post->id]) }}" method="post">
+                            {{-- action="{{ route('update', $post->id)}}" --}}
+                            <form action="{{ url('edit') }}" method="post">
                                 @csrf
 
                                 <input type="hidden" name="id" value="{{ $post->id }}">
