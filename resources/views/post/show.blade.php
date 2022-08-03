@@ -11,7 +11,7 @@
                             All Post
                             <a href="/add_post"><button class="btn btn-primary mx-3">Add Post</button></a>
                             <a href="/pdf"><button class="btn btn-secondary mx-3">Report</button></a>
-                            <a href="/trash"><button class="btn btn-outline-secondary mx-3">Trashed</button></a>
+                            {{-- <a href="/trash"><button class="btn btn-outline-secondary mx-3">Trashed</button></a> --}}
                         </div>
                         <div class="card-body">
                             @if (Session::has('post_deleted'))

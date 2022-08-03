@@ -39,12 +39,12 @@
                                             <td><?php echo $sr; ?></td>
                                             <td>{{ $post->title }}</td>
                                             <td>{{ $post->body }}</td>
-                                            <td>
+                                            {{-- <td>
                                                 
                                                 <a href="restore/{{ $post->id }}" class="btn btn-outline-warning btn-sm">
                                                      Restore</a>
                                                 
-                                            </td>
+                                            </td> --}}
                                         </tr>
                                         @php
                                             $sr++;

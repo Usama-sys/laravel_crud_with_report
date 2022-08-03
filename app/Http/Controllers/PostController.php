@@ -48,29 +48,29 @@ class PostController extends Controller
     public function show(Request $request, Post $post)
     {
 
-        $posts = Post::withoutTrashed()->orderBy('id','asc')->get();  
-        //$posts = Post::all(); allways ordered by id asc
+        // $posts = Post::withoutTrashed()->orderBy('id','asc')->get();  
+        $posts = Post::all(); //allways ordered by id asc
         return view('post.show',compact('posts')); 
         // return view('post.show')->with('posts',$posts);
     }
 
-    public function trash(Request $request, Post $post)
-    {
+    // public function trash(Request $request, Post $post)
+    // {
 
-        $posts = Post::onlyTrashed()->orderBy('id','asc')->get();  
-        //$posts = Post::all(); allways ordered by id asc
-        return view('post.trash',compact('posts')); 
-        // return view('post.show')->with('posts',$posts);
-    }
+    //     $posts = Post::onlyTrashed()->orderBy('id','asc')->get();  
+    //     //$posts = Post::all(); allways ordered by id asc
+    //     return view('post.trash',compact('posts')); 
+    //     // return view('post.show')->with('posts',$posts);
+    // }
 
-    public function restore($id)
-    {
+    // public function restore($id)
+    // {
 
-        Post::onlyTrashed()->find($id)->restore();  
-        return back()->with('post_restore','post has been restored successfully');
-        // return redirect('trash');
+    //     Post::onlyTrashed()->find($id)->restore();  
+    //     return back()->with('post_restore','post has been restored successfully');
+    //     // return redirect('trash');
        
-    }
+    // }
 
     
     public function edit($id)

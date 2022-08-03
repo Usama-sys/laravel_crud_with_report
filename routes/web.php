@@ -28,7 +28,7 @@ Route::post('add_post',[PostController::class,'store'])->name('insert');
 Route::get('edit/{id}',[PostController::class,'edit']);
 Route::post('edit',[PostController::class,'update'])->name('update');
 Route::get('delete/{id}',[PostController::class,'destroy']);
-Route::get('trash',[PostController::class,'trash']);
-Route::get('restore/{id}',[PostController::class,'restore']);
+// Route::get('trash',[PostController::class,'trash']);
+// Route::get('restore/{id}',[PostController::class,'restore']);
 
 Route::get('pdf',[PdfController::class,'generate']);
